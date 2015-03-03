@@ -5,7 +5,7 @@ to test
 end
 
 to test2
-    lsp:call "showString" ["test"]
+    lsp:call "showString" ["test" [] [] 5]
 
 end
 @#$#@#$#@

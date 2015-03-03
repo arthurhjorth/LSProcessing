@@ -143,17 +143,20 @@ public class LSProcessing implements ClassManager {
 			LogoList rawArgs = arg0[1].getList();
 			//
 			Class<? extends NetLogoProcessing> nlpClass = myFrame.nlp().getClass();
-			Class<?>[] args = getClassArgs(rawArgs);
 			
-			for (Class<?> c : args){
-				try {
-					App.app().workspace().outputObject(c.toString(), null, true, true, OutputDestination.NORMAL);
-				} catch (LogoException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				
-			}
+			if(rawArgs.size()>0){Class<?>[] args = getClassArgs(rawArgs);}
+			else {Class<?> args = null;}
+//			Class<?>[] args = getClassArgs(rawArgs);
+//			
+//			for (Class<?> c : args){
+//			try {
+//				App.app().workspace().outputObject(c.toString(), null, true, true, OutputDestination.NORMAL);
+//			} catch (LogoException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+//			
+//		}
 
 			
 			Method theMethod;
@@ -172,18 +175,24 @@ public class LSProcessing implements ClassManager {
 				// TODO Auto-generated catch block
 				throw new ExtensionException("3" + e.getMessage());
 			} 
-			
+
 			try {
+				try {
+					App.app().workspace().outputObject(args.toString(), null, true, true, OutputDestination.NORMAL);
+				} catch (LogoException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}				
 				theMethod.invoke(myFrame.nlp(), args);
 			} catch (IllegalArgumentException e) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
+				throw new ExtensionException(e.getMessage());
 			} catch (IllegalAccessException e) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
+				throw new ExtensionException(e.getMessage());
 			} catch (InvocationTargetException e) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
+				throw new ExtensionException(e.getMessage());
 			}
 
 			// Always call redraw after doing business logic
