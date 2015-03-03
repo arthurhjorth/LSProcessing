@@ -2,50 +2,30 @@ import java.awt.BorderLayout;
 
 import javax.swing.JFrame;
 
-import org.nlogo.api.LogoList;
-
-import processing.core.PApplet;
-
  public class ExampleFrame extends JFrame {
 	 /**
 	 * 
 	 */
 	private static final long serialVersionUID = -1574741235087050861L;
-	private Embedded embedded;
-	LogoList modelsInfo;
-
+	private NetLogoProcessing nlp;
+	
 	public ExampleFrame() {
          super("NetLogo to Procesing Extension Frame");
          setLayout(new BorderLayout());
-         newEmbedded();
-         
+         nlp = new NetLogoProcessing();
+         add(nlp, BorderLayout.CENTER);
+         nlp.init();
+         this.setSize(600,600);
+         this.setVisible(true);
      }
-	public PApplet embedded(){
-		return embedded;
-	}
-	
-	
-	public void setModelsInfo(LogoList alist){
-		modelsInfo = alist;
-		
-	}
-		
-	public void newEmbedded(){
-        embedded = new Embedded();
-        add(embedded, BorderLayout.WEST);
-
-        // important to call this whenever embedding a PApplet.
-        // It ensures that the animation thread is started and
-        // that other internal variables are properly set.
-        embedded.init();
-        this.setVisible(true);
-        this.setSize(800,800);
-        embedded.draw();
-	}
 	
 	public void kill(){
-		embedded.dispose();
+		nlp.dispose();
 		this.dispose();
+	}
+	
+	public NetLogoProcessing nlp(){
+		return nlp;
 	}
 	
  }

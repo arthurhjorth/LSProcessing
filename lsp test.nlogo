@@ -1,7 +1,12 @@
 extensions [lsp]
-
 to test 
   lsp:show  
+  
+end
+
+to test2
+    lsp:call "showString" ["test"]
+
 end
 @#$#@#$#@
 GRAPHICS-WINDOW
