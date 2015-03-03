@@ -142,11 +142,13 @@ public class LSProcessing implements ClassManager {
 			String methodName = arg0[0].getString();
 			LogoList rawArgs = arg0[1].getList();
 			//
+			
 			Class<? extends NetLogoProcessing> nlpClass = myFrame.nlp().getClass();
 			
-			if(rawArgs.size()>0){Class<?>[] args = getClassArgs(rawArgs);}
-			else {Class<?> args = null;}
-//			Class<?>[] args = getClassArgs(rawArgs);
+			Class<?>[] args;
+			if(rawArgs.size()>0){args = getClassArgs(rawArgs);}
+			else {args = null;}
+			
 //			
 //			for (Class<?> c : args){
 //			try {
