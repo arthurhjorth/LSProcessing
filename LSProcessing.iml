@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="EclipseModuleManager">
+    <libelement value="jar:///Applications/NetLogo 5.1.0/NetLogo.jar!/" />
+    <libelement value="jar:///Applications/NetLogo 5.1.0/extensions/lsp/core.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/controlP5-2.0.4/controlP5/library/controlP5.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/G4P/library/G4P.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/ant-launcher.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/ant.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/antlr.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/com.ibm.icu_4.4.2.v20110823.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/core.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/gluegen-rt-natives-linux-amd64.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/gluegen-rt-natives-linux-armv6hf.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/gluegen-rt-natives-linux-i586.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/gluegen-rt-natives-macosx-universal.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/gluegen-rt-natives-windows-amd64.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/gluegen-rt-natives-windows-i586.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/gluegen-rt.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/jdi.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/jdimodel.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/jna.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/jogl-all-natives-linux-amd64.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/jogl-all-natives-linux-armv6hf.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/jogl-all-natives-linux-i586.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/jogl-all-natives-macosx-universal.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/jogl-all-natives-windows-amd64.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/jogl-all-natives-windows-i586.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/jogl-all.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/org-netbeans-swing-outline.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/org.eclipse.osgi_3.8.1.v20120830-144521.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/pde.jar!/" />
+    <src_description expected_position="0">
+      <src_folder value="file://$MODULE_DIR$/lsProcessingFiles" expected_position="0" />
+    </src_description>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="false">
+    <output url="file://$MODULE_DIR$/bin" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/lsProcessingFiles" isTestSource="false" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="module-library">
+      <library name="NetLogo.jar">
+        <CLASSES>
+          <root url="jar:///Applications/NetLogo 5.1.0/NetLogo.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="core.jar">
+        <CLASSES>
+          <root url="jar:///Applications/NetLogo 5.1.0/extensions/lsp/core.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="controlP5.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/controlP5-2.0.4/controlP5/library/controlP5.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="G4P.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/G4P/library/G4P.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="ant-launcher.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/ant-launcher.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="ant.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/ant.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="antlr.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/antlr.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="com.ibm.icu_4.4.2.v20110823.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/com.ibm.icu_4.4.2.v20110823.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="lib/core.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/core.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="gluegen-rt-natives-linux-amd64.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/gluegen-rt-natives-linux-amd64.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="gluegen-rt-natives-linux-armv6hf.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/gluegen-rt-natives-linux-armv6hf.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="gluegen-rt-natives-linux-i586.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/gluegen-rt-natives-linux-i586.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="gluegen-rt-natives-macosx-universal.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/gluegen-rt-natives-macosx-universal.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="gluegen-rt-natives-windows-amd64.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/gluegen-rt-natives-windows-amd64.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="gluegen-rt-natives-windows-i586.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/gluegen-rt-natives-windows-i586.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="gluegen-rt.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/gluegen-rt.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jdi.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/jdi.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jdimodel.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/jdimodel.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jna.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/jna.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jogl-all-natives-linux-amd64.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/jogl-all-natives-linux-amd64.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jogl-all-natives-linux-armv6hf.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/jogl-all-natives-linux-armv6hf.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jogl-all-natives-linux-i586.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/jogl-all-natives-linux-i586.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jogl-all-natives-macosx-universal.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/jogl-all-natives-macosx-universal.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jogl-all-natives-windows-amd64.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/jogl-all-natives-windows-amd64.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jogl-all-natives-windows-i586.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/jogl-all-natives-windows-i586.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jogl-all.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/jogl-all.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="org-netbeans-swing-outline.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/org-netbeans-swing-outline.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="org.eclipse.osgi_3.8.1.v20120830-144521.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/org.eclipse.osgi_3.8.1.v20120830-144521.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="pde.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/pde.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
+</module>
