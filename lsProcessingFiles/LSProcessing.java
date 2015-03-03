@@ -145,9 +145,6 @@ public class LSProcessing implements ClassManager {
 			Class<? extends NetLogoProcessing> nlpClass = myFrame.nlp().getClass();
 			Class<?>[] args = getClassArgs(rawArgs);
 			
-			
-//			String mssg = "LevelsSpace loaded, Copyright Arthur Hjorth & Uri Wilensky 2012 (arthur.hjorth@u.northwestern.edu) \n" +
-//			"Type \"ls:help\" for a list and explanation of all primitives";
 			for (Class<?> c : args){
 				try {
 					App.app().workspace().outputObject(c.toString(), null, true, true, OutputDestination.NORMAL);
@@ -159,12 +156,13 @@ public class LSProcessing implements ClassManager {
 			}
 
 			
-			
+			Method theMethod;
 			
 			try {
-				Method theMethod = nlpClass.getMethod(methodName, (Class<?>[])args);
-				// this here doesn't work
-				theMethod.invoke(myFrame.nlp(), args);
+				theMethod = nlpClass.getMethod(methodName, args);
+				// this here doesn't work. Look up what varargs are,
+				// and make sure that's what I'm making instead of args,
+				// because that's what is not working, I think.
 			} catch (SecurityException e) {
 				throw new ExtensionException("1 "+e.getMessage());
 			} catch (NoSuchMethodException e) {
@@ -174,15 +172,20 @@ public class LSProcessing implements ClassManager {
 				// TODO Auto-generated catch block
 				throw new ExtensionException("3" + e.getMessage());
 			} 
-			catch (IllegalAccessException e) {
+			
+			try {
+				theMethod.invoke(myFrame.nlp(), args);
+			} catch (IllegalArgumentException e) {
 				// TODO Auto-generated catch block
-				throw new ExtensionException("4" + e.getMessage());
+				e.printStackTrace();
+			} catch (IllegalAccessException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			} catch (InvocationTargetException e) {
 				// TODO Auto-generated catch block
-				throw new ExtensionException("5" + e.getMessage());
+				e.printStackTrace();
 			}
-			
-			
+
 			// Always call redraw after doing business logic
 			// - it calls the PApplet's draw() method
 			myFrame.nlp().redraw();
