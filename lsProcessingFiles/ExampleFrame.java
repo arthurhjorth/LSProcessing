@@ -15,8 +15,7 @@ import processing.core.PApplet;
 	LogoList modelsInfo;
 
 	public ExampleFrame() {
-         super("LevelSpace Relationship Fixer");
-
+         super("NetLogo to Procesing Extension Frame");
          setLayout(new BorderLayout());
          newEmbedded();
          
@@ -30,15 +29,7 @@ import processing.core.PApplet;
 		modelsInfo = alist;
 		
 	}
-	
-	public void updateModelsInfo(){
-		embedded.setModelsInfo(modelsInfo);
-	}
-	
-	public void reset(){
-		embedded.dispose();
-	}
-	
+		
 	public void newEmbedded(){
         embedded = new Embedded();
         add(embedded, BorderLayout.WEST);
