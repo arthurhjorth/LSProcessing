@@ -18,8 +18,6 @@ import org.nlogo.api.LogoException;
 import org.nlogo.api.LogoList;
 import org.nlogo.api.PrimitiveManager;
 import org.nlogo.api.Syntax;
-import org.nlogo.app.App;
-import org.nlogo.nvm.Workspace.OutputDestination;
 
 
 public class LSProcessing implements ClassManager {
@@ -65,7 +63,7 @@ public class LSProcessing implements ClassManager {
 		pm.addPrimitive("show", new OpenGUI());
 		pm.addPrimitive("kill", new Kill());
 		pm.addPrimitive("call", new Call());
-		pm.addPrimitive("test", new Test());
+		pm.addPrimitive("draw", new Draw());
 	}
 
 	@Override
@@ -107,8 +105,7 @@ public class LSProcessing implements ClassManager {
 			
 		}
 	}
-	
-	public static class Test extends DefaultCommand {
+	public static class Draw extends DefaultCommand {
 		public Syntax getSyntax() {
 			return Syntax.commandSyntax(
 					// we take in nothing 
@@ -117,16 +114,7 @@ public class LSProcessing implements ClassManager {
 		@Override
 		public void perform(Argument[] arg0, Context arg1)
 				throws ExtensionException, LogoException {
-			SwingUtilities.invokeLater(new Runnable(){
-
-				@Override
-				public void run() {
-					// TODO Auto-generated method stub
-					myFrame.nlp().redraw();
-				}
-
-			});
-			
+			myFrame.nlp().redraw();
 		}
 	}
 	
@@ -140,69 +128,39 @@ public class LSProcessing implements ClassManager {
 		public void perform(Argument[] arg0, Context arg1)
 				throws ExtensionException, LogoException {
 			String methodName = arg0[0].getString();
-			LogoList rawArgs = arg0[1].getList();
-			//
-			
-			Class<? extends NetLogoProcessing> nlpClass = myFrame.nlp().getClass();
-			
+			// array for classes to find the method
 			Class<?>[] args;
-			if(rawArgs.size()>0){args = getClassArgs(rawArgs);}
-			else {args = null;}
-			
-//			
-//			for (Class<?> c : args){
-//			try {
-//				App.app().workspace().outputObject(c.toString(), null, true, true, OutputDestination.NORMAL);
-//			} catch (LogoException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}
-//			
-//		}
-
-			
+			// array of objects as actual args
+			Object[] actuals;
+			if (arg0.length>1){
+				args = getClassArgs(arg0[1].getList());		
+				actuals = getCleanArgs(arg0[1].getList());
+			}
+			else {
+				args = null;
+				actuals = null;
+			}			
+			// get NetLogoProcessing class
+			Class<? extends NetLogoProcessing> nlpClass = myFrame.nlp().getClass();
 			Method theMethod;
-			
+			// get the method & invoke it
 			try {
 				theMethod = nlpClass.getMethod(methodName, args);
-				// this here doesn't work. Look up what varargs are,
-				// and make sure that's what I'm making instead of args,
-				// because that's what is not working, I think.
+				theMethod.invoke(myFrame.nlp(), actuals);
 			} catch (SecurityException e) {
-				throw new ExtensionException("1 "+e.getMessage());
+				throw new ExtensionException(e.getMessage());
 			} catch (NoSuchMethodException e) {
-				// TODO Auto-generated catch block
-				throw new ExtensionException("2 " + e.getMessage());
+				throw new ExtensionException(e.getMessage());
 			} catch (IllegalArgumentException e) {
-				// TODO Auto-generated catch block
-				throw new ExtensionException("3" + e.getMessage());
-			} 
-
-			try {
-				try {
-					App.app().workspace().outputObject(args.toString(), null, true, true, OutputDestination.NORMAL);
-				} catch (LogoException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}				
-				theMethod.invoke(myFrame.nlp(), args);
-			} catch (IllegalArgumentException e) {
-				// TODO Auto-generated catch block
 				throw new ExtensionException(e.getMessage());
 			} catch (IllegalAccessException e) {
-				// TODO Auto-generated catch block
 				throw new ExtensionException(e.getMessage());
 			} catch (InvocationTargetException e) {
-				// TODO Auto-generated catch block
 				throw new ExtensionException(e.getMessage());
-			}
-
-			// Always call redraw after doing business logic
-			// - it calls the PApplet's draw() method
-			myFrame.nlp().redraw();
+			} 
 		}
 		
-		public Class<?>[] getClassArgs(LogoList rawArgs){
+		public Class<?>[] getClassArgs(LogoList rawArgs) throws ExtensionException{
 			Class<?>[] args = new Class[rawArgs.size()];
 			for (int i = 0; i < rawArgs.size();i++){
 				Object anArg = rawArgs.get(i);
@@ -210,13 +168,39 @@ public class LSProcessing implements ClassManager {
 					args[i] = String.class;
 				}
 				else if (anArg instanceof LogoList){
-					args[i] = List.class;
+					args[i] = ArrayList.class;
 				}
 				else if (anArg instanceof Double){
 					args[i] = Double.class;
 				}
+				else{
+					throw new ExtensionException("You can only pass strings, numbers, or lists to Processing");
+				}
 			}
 			return args;
+		}
+		public Object[] getCleanArgs(LogoList rawArgs){
+			Object[] cleanArgs = new Object[rawArgs.size()];
+			for (int i = 0; i<rawArgs.size();i++){
+				cleanArgs[i] = getArg(rawArgs.get(i));
+			}
+			return cleanArgs;
+		}
+		public ArrayList<Object> cleanList(LogoList inList){
+			ArrayList<Object> outlist = new ArrayList<Object>();
+			for (Object o : inList){
+				outlist.add(getArg(o));
+			}
+			return outlist;
+		}
+		public Object getArg(Object o){
+			if(o instanceof String || o instanceof Double){
+				return o;
+			}
+			else {
+				return cleanList((LogoList)o);
+			} 
+			
 		}
 	}
 	
@@ -232,7 +216,5 @@ public class LSProcessing implements ClassManager {
 			myFrame.kill();
 			myFrame = null;
 		}
-
 	}
-
 }

@@ -20,7 +20,7 @@ import javax.swing.JFrame;
      }
 	
 	public void kill(){
-		nlp.dispose();
+		nlp().dispose();
 		this.dispose();
 	}
 	
