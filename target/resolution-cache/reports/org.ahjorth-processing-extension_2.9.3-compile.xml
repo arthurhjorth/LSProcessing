@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
+<ivy-report version="1.0">
+	<info
+		organisation="org.ahjorth"
+		module="processing-extension_2.9.3"
+		revision="0.1"
+		conf="compile"
+		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
+		date="20150305105343"/>
+	<dependencies>
+		<module organisation="org.processing" name="Processing">
+			<revision name="1.3.0-SNAPSHOT" status="release" pubdate="20150305105343" resolver="local" artresolver="local" downloaded="false" searched="true" default="true" conf="default(compile), default" position="2">
+				<metadata-artifact status="no" details="" size="0" time="0" location="/Users/hah661/.ivy2/cache/org.processing/Processing/ivy-1.3.0-SNAPSHOT.xml" searched="true"/>
+				<caller organisation="org.ahjorth" name="processing-extension_2.9.3" conf="compile" rev="1.3.0-SNAPSHOT" rev-constraint-default="1.3.0-SNAPSHOT" rev-constraint-dynamic="1.3.0-SNAPSHOT" callerrev="0.1"/>
+				<artifacts>
+					<artifact name="Processing" type="jar" ext="jar" status="no" details="" size="0" time="0" location="/Users/hah661/.ivy2/cache/org.processing/Processing/jars/Processing-1.3.0-SNAPSHOT.jar">
+						<origin-location is-local="true" location="/lib/core.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.nlogo" name="NetLogoHeadless">
+			<revision name="5.2.0-SNAPSHOT" status="release" pubdate="20150305105343" resolver="local" artresolver="local" downloaded="false" searched="true" default="true" conf="default(compile), default" position="1">
+				<metadata-artifact status="no" details="" size="0" time="0" location="/Users/hah661/.ivy2/cache/org.nlogo/NetLogoHeadless/ivy-5.2.0-SNAPSHOT.xml" searched="true"/>
+				<caller organisation="org.ahjorth" name="processing-extension_2.9.3" conf="compile" rev="5.2.0-SNAPSHOT" rev-constraint-default="5.2.0-SNAPSHOT" rev-constraint-dynamic="5.2.0-SNAPSHOT" callerrev="0.1"/>
+				<artifacts>
+					<artifact name="NetLogoHeadless" type="jar" ext="jar" status="no" details="" size="0" time="0" location="/Users/hah661/.ivy2/cache/org.nlogo/NetLogoHeadless/jars/NetLogoHeadless-5.2.0-SNAPSHOT.jar">
+						<origin-location is-local="true" location="/lib/NetLogo.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang" name="scala-library">
+			<revision name="2.9.3" status="release" pubdate="20130228112533" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="0">
+				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html          "/>
+				<metadata-artifact status="no" details="" size="2391" time="0" location="/Users/hah661/.ivy2/cache/org.scala-lang/scala-library/ivy-2.9.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.9.3/scala-library-2.9.3.pom"/>
+				<caller organisation="org.ahjorth" name="processing-extension_2.9.3" conf="compile" rev="2.9.3" rev-constraint-default="2.9.3" rev-constraint-dynamic="2.9.3" callerrev="0.1"/>
+				<artifacts>
+					<artifact name="scala-library" type="jar" ext="jar" status="no" details="" size="9039572" time="0" location="/Users/hah661/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.9.3.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.9.3/scala-library-2.9.3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+	</dependencies>
+</ivy-report>

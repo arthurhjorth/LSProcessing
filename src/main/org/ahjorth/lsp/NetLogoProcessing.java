@@ -1,3 +1,5 @@
+package org.ahjorth.lsp;
+
 import processing.core.PApplet;
 import processing.core.PGraphics;
 import processing.core.PGraphicsJava2D;
@@ -5,13 +7,21 @@ import processing.core.PGraphicsJava2D;
 /*
  * Abstract class for doing Processing in NetLogo. Extend this class
  * and fill in your code
+ *
  */
-public abstract class NetLogoProcessing extends PApplet {
+public class NetLogoProcessing extends PApplet {
 
 	private static final long serialVersionUID = 7587604932372737852L;
-	
-	public abstract void setup();
-	public abstract void draw();
+
+    public NetLogoProcessing(){
+        super();
+    }
+
+    public void loadSketch(String path){
+        String[] stringArray = new String[] {path};
+        this.runSketch(stringArray);
+    }
+
 	
 	protected PGraphics makeGraphics(int iwidth, int iheight,
 			String irenderer, String ipath,

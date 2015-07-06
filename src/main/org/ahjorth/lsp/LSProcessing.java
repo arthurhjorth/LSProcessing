@@ -1,3 +1,5 @@
+package org.ahjorth.lsp;
+
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -22,9 +24,9 @@ import org.nlogo.api.Syntax;
 
 public class LSProcessing implements ClassManager {
 	
-	public static void main(String[] args){
-		myFrame = new ExampleFrame();
-	}
+//	public static void main(String[] args){
+//		myFrame = new ExampleFrame();
+//	}
 	
 	public static ExampleFrame myFrame;
 
@@ -49,13 +51,13 @@ public class LSProcessing implements ClassManager {
 	@Override
 	public void importWorld(List<String[]> arg0, ExtensionManager em,
 			ImportErrorHandler arg2) throws ExtensionException {
-		 Runnable doHelloWorld = new Runnable() {
-		     public void run() {
-		         myFrame = new ExampleFrame();
-		     }
-		 };
-
-		 SwingUtilities.invokeLater(doHelloWorld);
+//		 Runnable doHelloWorld = new Runnable() {
+//		     public void run() {
+//		         myFrame = new ExampleFrame();
+//		     }
+//		 };
+//
+//		 SwingUtilities.invokeLater(doHelloWorld);
 	}
 
 	@Override
@@ -64,6 +66,7 @@ public class LSProcessing implements ClassManager {
 		pm.addPrimitive("kill", new Kill());
 		pm.addPrimitive("call", new Call());
 		pm.addPrimitive("draw", new Draw());
+        pm.addPrimitive("load-sketch", new LoadSketch());
 	}
 
 	@Override
@@ -98,7 +101,7 @@ public class LSProcessing implements ClassManager {
 				@Override
 				public void run() {
 					// TODO Auto-generated method stub
-					myFrame = new ExampleFrame();
+					myFrame = new ExampleFrame("/Users/hah661/Documents/Processing/Bubbles/Bubbles.pde");
 				}
 
 			});
@@ -203,18 +206,30 @@ public class LSProcessing implements ClassManager {
 			
 		}
 	}
-	
-	public static class Kill extends DefaultCommand {
-		public Syntax getSyntax() {
-			return Syntax.commandSyntax(
-					// we take in nothing 
-					new int[] { });
-		}
 
-		public void perform(Argument args[], Context context)
-				throws ExtensionException, org.nlogo.api.LogoException {
-			myFrame.kill();
-			myFrame = null;
-		}
-	}
+    public static class Kill extends DefaultCommand {
+        public Syntax getSyntax() {
+            return Syntax.commandSyntax(
+                    // we take in nothing
+                    new int[] { });
+        }
+
+        public void perform(Argument args[], Context context)
+                throws ExtensionException, org.nlogo.api.LogoException {
+            myFrame.kill();
+            myFrame = null;
+        }
+    }
+    public static class LoadSketch extends DefaultCommand {
+        public Syntax getSyntax() {
+            return Syntax.commandSyntax(
+                    // we take in nothing
+                    new int[] {Syntax.StringType()});
+        }
+
+        public void perform(Argument args[], Context context)
+                throws ExtensionException, org.nlogo.api.LogoException {
+
+        }
+    }
 }

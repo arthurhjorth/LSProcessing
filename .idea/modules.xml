@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/LSProcessing.iml" filepath="$PROJECT_DIR$/LSProcessing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lsprocessing.iml" filepath="$PROJECT_DIR$/lsprocessing.iml" />
     </modules>
   </component>
 </project>

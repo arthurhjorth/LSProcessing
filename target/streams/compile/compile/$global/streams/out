@@ -1,0 +1,29 @@
+[0m[[0mdebug[0m] [0m[0m
+[0m[[0mdebug[0m] [0mInitial source changes: [0m
+[0m[[0mdebug[0m] [0m	removed:Set()[0m
+[0m[[0mdebug[0m] [0m	added: Set(/Users/hah661/Documents/workspace/LSProcessing/src/main/org/ahjorth/lsp/ExampleFrame.java, /Users/hah661/Documents/workspace/LSProcessing/src/main/org/ahjorth/lsp/LSProcessing.java, /Users/hah661/Documents/workspace/LSProcessing/src/main/org/ahjorth/lsp/NetLogoProcessing.java)[0m
+[0m[[0mdebug[0m] [0m	modified: Set()[0m
+[0m[[0mdebug[0m] [0mRemoved products: Set()[0m
+[0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set()[0m
+[0m[[0mdebug[0m] [0mModified binary dependencies: Set()[0m
+[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(/Users/hah661/Documents/workspace/LSProcessing/src/main/org/ahjorth/lsp/ExampleFrame.java, /Users/hah661/Documents/workspace/LSProcessing/src/main/org/ahjorth/lsp/LSProcessing.java, /Users/hah661/Documents/workspace/LSProcessing/src/main/org/ahjorth/lsp/NetLogoProcessing.java)[0m
+[0m[[0mdebug[0m] [0m[0m
+[0m[[0mdebug[0m] [0mSources indirectly invalidated by:[0m
+[0m[[0mdebug[0m] [0m	product: Set()[0m
+[0m[[0mdebug[0m] [0m	binary dep: Set()[0m
+[0m[[0mdebug[0m] [0m	external source: Set()[0m
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/Users/hah661/Documents/workspace/LSProcessing/src/main/org/ahjorth/lsp/ExampleFrame.java, /Users/hah661/Documents/workspace/LSProcessing/src/main/org/ahjorth/lsp/LSProcessing.java, /Users/hah661/Documents/workspace/LSProcessing/src/main/org/ahjorth/lsp/NetLogoProcessing.java)[0m
+[0m[[0mdebug[0m] [0mRecompiling all 3 sources: invalidated sources (3) exceeded 50.0% of all sources[0m
+[0m[[0minfo[0m] [0mCompiling 3 Java sources to /Users/hah661/Documents/workspace/LSProcessing/target/scala-2.9.3/classes...[0m
+[0m[[0mdebug[0m] [0mAttempting to call javac directly...[0m
+[0m[[31merror[0m] [0m/Users/hah661/Documents/workspace/LSProcessing/src/main/org/ahjorth/lsp/ExampleFrame.java:20: cannot find symbol[0m
+[0m[[31merror[0m] [0msymbol  : variable sketchname[0m
+[0m[[31merror[0m] [0mlocation: class org.ahjorth.lsp.ExampleFrame[0m
+[0m[[31merror[0m] [0m        nlp = NetLogoProcessing.loadSketch(sketchname);[0m
+[0m[[31merror[0m] [0m                                           ^[0m
+[0m[[31merror[0m] [0m/Users/hah661/Documents/workspace/LSProcessing/src/main/org/ahjorth/lsp/ExampleFrame.java:20: non-static method loadSketch(java.lang.String) cannot be referenced from a static context[0m
+[0m[[31merror[0m] [0m        nlp = NetLogoProcessing.loadSketch(sketchname);[0m
+[0m[[31merror[0m] [0m                               ^[0m
+[0m[[31merror[0m] [0m2 errors[0m
+[0m[[0mdebug[0m] [0mjavac returned exit code: 1[0m
+[0m[[31merror[0m] [0m(compile:[31mcompile[0m) javac returned nonzero exit code[0m

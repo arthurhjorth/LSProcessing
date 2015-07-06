@@ -1,0 +1,27 @@
+[0m[[0minfo[0m] [0mPackaging /Users/hah661/Documents/workspace/LSProcessing/target/scala-2.9.3/processing-extension_2.9.3-0.1.jar ...[0m
+[0m[[0mdebug[0m] [0mInput file mappings:[0m
+[0m[[0mdebug[0m] [0m	org/ahjorth/lsp/LSProcessing.class[0m
+[0m[[0mdebug[0m] [0m	  /Users/hah661/Documents/workspace/LSProcessing/target/scala-2.9.3/classes/org/ahjorth/lsp/LSProcessing.class[0m
+[0m[[0mdebug[0m] [0m	org/ahjorth/lsp/LSProcessing$Kill.class[0m
+[0m[[0mdebug[0m] [0m	  /Users/hah661/Documents/workspace/LSProcessing/target/scala-2.9.3/classes/org/ahjorth/lsp/LSProcessing$Kill.class[0m
+[0m[[0mdebug[0m] [0m	org/ahjorth/lsp/LSProcessing$OpenGUI.class[0m
+[0m[[0mdebug[0m] [0m	  /Users/hah661/Documents/workspace/LSProcessing/target/scala-2.9.3/classes/org/ahjorth/lsp/LSProcessing$OpenGUI.class[0m
+[0m[[0mdebug[0m] [0m	org/ahjorth/lsp[0m
+[0m[[0mdebug[0m] [0m	  /Users/hah661/Documents/workspace/LSProcessing/target/scala-2.9.3/classes/org/ahjorth/lsp[0m
+[0m[[0mdebug[0m] [0m	org/ahjorth/lsp/LSProcessing$OpenGUI$1.class[0m
+[0m[[0mdebug[0m] [0m	  /Users/hah661/Documents/workspace/LSProcessing/target/scala-2.9.3/classes/org/ahjorth/lsp/LSProcessing$OpenGUI$1.class[0m
+[0m[[0mdebug[0m] [0m	org/ahjorth/lsp/LSProcessing$LoadSketch.class[0m
+[0m[[0mdebug[0m] [0m	  /Users/hah661/Documents/workspace/LSProcessing/target/scala-2.9.3/classes/org/ahjorth/lsp/LSProcessing$LoadSketch.class[0m
+[0m[[0mdebug[0m] [0m	org/ahjorth[0m
+[0m[[0mdebug[0m] [0m	  /Users/hah661/Documents/workspace/LSProcessing/target/scala-2.9.3/classes/org/ahjorth[0m
+[0m[[0mdebug[0m] [0m	org[0m
+[0m[[0mdebug[0m] [0m	  /Users/hah661/Documents/workspace/LSProcessing/target/scala-2.9.3/classes/org[0m
+[0m[[0mdebug[0m] [0m	org/ahjorth/lsp/ExampleFrame.class[0m
+[0m[[0mdebug[0m] [0m	  /Users/hah661/Documents/workspace/LSProcessing/target/scala-2.9.3/classes/org/ahjorth/lsp/ExampleFrame.class[0m
+[0m[[0mdebug[0m] [0m	org/ahjorth/lsp/NetLogoProcessing.class[0m
+[0m[[0mdebug[0m] [0m	  /Users/hah661/Documents/workspace/LSProcessing/target/scala-2.9.3/classes/org/ahjorth/lsp/NetLogoProcessing.class[0m
+[0m[[0mdebug[0m] [0m	org/ahjorth/lsp/LSProcessing$Draw.class[0m
+[0m[[0mdebug[0m] [0m	  /Users/hah661/Documents/workspace/LSProcessing/target/scala-2.9.3/classes/org/ahjorth/lsp/LSProcessing$Draw.class[0m
+[0m[[0mdebug[0m] [0m	org/ahjorth/lsp/LSProcessing$Call.class[0m
+[0m[[0mdebug[0m] [0m	  /Users/hah661/Documents/workspace/LSProcessing/target/scala-2.9.3/classes/org/ahjorth/lsp/LSProcessing$Call.class[0m
+[0m[[0minfo[0m] [0mDone packaging.[0m
